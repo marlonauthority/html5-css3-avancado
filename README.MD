@@ -34,10 +34,11 @@ A sintaxe é: border-radius rx rx rx rx;
 ## Transform
 Está propriedade permite o controle da posição do elemento sem afetar o fluxo da pagína.
 Seu uso é simples basta especificar o tipo de transformação.
-`transform: rotate(30deg)` -> Rotaciona em 30 graus.
-`transform: scale(1.5)` -> Aumenta sua escala x 1.5
-`transform: skew(20deg)` -> Entorta o elemento, fazendo crescer ou diminuir em 20 graus.
-`transform: translate(10px, 50px)` -> Faz um translado de 10 pixels para direita e 50 para cima.
+
+* `transform: rotate(30deg)` -> Rotaciona em 30 graus.
+* `transform: scale(1.5)` -> Aumenta sua escala x 1.5
+* `transform: skew(20deg)` -> Entorta o elemento, fazendo crescer ou diminuir em 20 graus.
+* `transform: translate(10px, 50px)` -> Faz um translado de 10 pixels para direita e 50 para cima.
 
 * Para transformações em 3D é usado 3 eixos para definir o tamanho dos nossos objetos: X, Y e Z.
   * translatex - eixo X
