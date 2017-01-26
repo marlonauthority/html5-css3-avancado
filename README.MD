@@ -45,3 +45,10 @@ Seu uso é simples basta especificar o tipo de transformação.
   * translatey - eixo Y
   * translatez - profundidade
 Também é necesário especificar a perspectiva `(perspective)` para definir a distancia que o usuário estaá da tela para que possamos fazer o cálculo de projeção do 3D. Outro pronto importante é a anfulação que o usuário está olhando, o que causa diferentes efeitos de perspectiva. Para lidar com essa diferença usamos a propriedade `perspective-origin`
+
+#Gradientes
+É possível criar efeitos visuais de gradientes utilizando a propriedade `background-image` passando como parâmetro `linear-gradient()`
+Exemp: `background-image: linear-gradient(to bottom, red, black);` -> Cria um gradiente começando vermelho em cima indo em direção ao final "bottom" de cor preta.
+
+Também é possível criar gradientes radiais:
+`background-image: radial-gradient(yellow, red);`
