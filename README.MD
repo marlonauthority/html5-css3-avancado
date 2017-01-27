@@ -1,7 +1,7 @@
 # Atualização de uma pagina simples para html5 e css3 avançado.
 
 ## Verificar as funcionalidades novas
-> Entre no site "caniuse.com" e verifique se as funcionalidades que você queira implementar está disponível e/ou suporta o seu navegador padrão.
+> Entre no site "caniuse.com" e verifique se as funcionalidades que você queira implementar, se está disponível e/ou suporta em seu navegador padrão.
 
 
 ## Medidas relativas
@@ -26,9 +26,9 @@ Se a fonte do navegador for de 20px: 20px x 1,25 = 25px
 `Static` -> É o valor padrão de todos os elementos, grosseiramente seria dizer que o elemento com position - static não tem posição definida.
 
 
-#### Border-Radius
+### Border-Radius
 Implementado para colocar bordas arredondadas em elementos.
-A sintaxe é: border-radius rx rx rx rx;
+* A sintaxe é: `border-radius rx rx rx rx;`
 
 
 ## Transform
@@ -63,15 +63,16 @@ Em uma lista de li's estamos apenas aplicando o margin-top apos o segundo li (el
 * `>` -> Pega o elemento pai e filho, deixando de lado ancestral de descendente.
 
 ## Pseudoclasses
-É uma maneiro mais profissional de selecionar elementos pela estrutura, as pseudoclasses são chamadas com os "`:`" (`dois pontos`):
-  * :odd
-  * :even
+É uma maneira melhor de selecionar elementos pela estrutura, as pseudoclasses são chamadas com os "`:`" (`dois pontos`):
+  * `:odd`
+  * `:even`
+
 Na linguagem que estamos usando, generalizamos essas pseudoclasses com "`:nth-child()`". Dessa maneira, podemos estilizar não só as linhas pares ou ímpares:
-  * :nth-child(odd) - linhas ímpares;
-  * :nth-child(even) - linhas pares;
-  * :nth-child(3) - terceira linha;
-  * :first-child - primeira linha;
-  * :last-child - última linha.
+  * `:nth-child(odd)` - linhas ímpares;
+  * `:nth-child(even)` - linhas pares;
+  * `:nth-child(3)` - terceira linha;
+  * `:first-child` - primeira linha;
+  * `:last-child` - última linha.
 
 Também podemos inserir fórmulas dentro do `:nth-child()` como `nth-child(2n)` que nada mais é do que as linhas pares. Ou `nth-child(2n+1)`, que são as ímpares.
 
@@ -80,3 +81,5 @@ Em que:
  -  x é a periodicidade, de quantos em quantos elementos será aplicado o estilo;
  -  c é o ponto de partida;
  -  n é a variável, que começa em 0 (zero).
+
+ ## Pseudoelementos
