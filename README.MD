@@ -82,7 +82,7 @@ Em que:
  -  c é o ponto de partida;
  -  n é a variável, que começa em 0 (zero).
 
- ## Pseudoelementos
+## Pseudoelementos
 Assim como as pseudo-classes permite aplicar estilos em partes de um documento.
 * `::after` -> Permite alterar/adicionar conteúdo no inicio do elemento.
 * `::before` -> Permite alterar/adicionar conteúdo no final do elemento.
