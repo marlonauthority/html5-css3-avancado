@@ -86,3 +86,15 @@ Em que:
 Assim como as pseudo-classes permite aplicar estilos em partes de um documento.
 * `::after` -> Permite alterar/adicionar conteúdo no inicio do elemento.
 * `::before` -> Permite alterar/adicionar conteúdo no final do elemento.
+
+## Função calc()
+A função calc() permite que se definam valores CSS com uso de expressões matemáticas, ou seja, o valor adotado para a propriedade é o resultado de uma expressão matemática.
+
+Os operadores matemáticos válidos são: + (soma), - (subtração), * (multiplicação) e / (divisão). As unidades de medida CSS válidas na expressão matemática são as unidades CSS para: comprimento, ângulo, tempo, frequência e números inteiros e fracionários.
+
+A função calc() traz três grandes vantagens para nosso código.
+  * A primeira é a legibilidade: podemos deixar algumas contas explícitas, facilitando o entendimento e a manutenção do código.
+
+  * A segunda é o poder: conseguimos criar layouts que não eram possíveis sem JavaScript antes, como elementos que ocupam um espaço que outros deixaram sobrando.
+
+  * A terceira é a flexibilidade: como podemos misturar unidades nas contas, conseguimos deixar nosso layout ainda mais flexível, com um comportamento adequado em tamanhos de tela diferentes e com fontes diferentes.
