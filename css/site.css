@@ -2,7 +2,7 @@ body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
     font-size: 120%;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 h1,
@@ -13,12 +13,11 @@ h2,
 
 h1 {
     text-transform: uppercase;
-    font-size: 1em;
-    text-shadow: 2px 2px #000;
+    font-size: 3em;
+    text-shadow: 3px 3px #000;
 }
 
 .titulo-principal {
-    font-size: 300%;
     text-align: center;
     background-color: #851944;
     color: #FFF;
@@ -27,12 +26,19 @@ h1 {
 }
 
 .subtitulo-texto {
-    font-size: 2em;
+    font-size: 1.5em;
     clear: both;
 }
 
 main a {
     color: #851944;
+}
+
+main a:hover,
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
 }
 
 main p {
@@ -53,29 +59,41 @@ main p {
     text-transform: lowercase;
 }
 
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
 .navegacao-site h1 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-bottom: 1em;
 }
 
 .rodape-pagina {
-    background-color: rgba(0, 0, 0, .3);
-    color: #000;
-    padding: 20px;
+    color: #F2FFFC;
+    padding: 1em;
     clear: both;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
 }
 
 .container {
-    width: 720px;
+    width: 80ch;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em 0;
+    padding: 1.5em 0;
 }
 
 strong {
@@ -117,8 +135,8 @@ main {
 
 .minha-foto,
 .navegacao-site {
-    border-left: .8rem solid black;
-    border-bottom: .8rem solid black;
+    border-left: .5em solid black;
+    border-bottom: .5em solid black;
     box-sizing: border-box;
 }
 
@@ -135,13 +153,103 @@ main {
     right: 0;
     height: 300px;
 }
-main a:hover,
-main a:focus,
-footer a:hover,
-footer a:focus {
-    color: red;
+
+.icones-redes-sociais a {
+    position: relative;
 }
-.navegacao-site a:hover,
-.navegacao-site a:focus {
-    text-shadow: 0 0 2px pink;
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    transform: translateY(.5em) rotate(45deg);
+}
+/* Podemos usar um seletor de atributo para selecionar
+   apenas a legenda desse campo e não dos outros */
+legend,
+label[for="mensagem"] {
+    font-weight: bold;
+    margin-top: 1em;
+}
+/* As tags <label> que têm o atributo "for" são
+   os rótulos dos campos sem ser os assuntos */
+label[for] {
+    display: block;
+}
+/* Selecionamos apenas os campos de texto */
+input[type="text"],
+input[type="email"],
+textarea {
+    /* Força o navegador a usar a mesma fonte da página */
+    font-family: inherit;
+    /* Inclusive o tamanho dela */
+    font-size: 100%;
+    padding: .25em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+/* alguns ajustes para o campo "Outro": deixar ele na mesma linha dos outros assuntos */
+fieldset > fieldset {
+    display: inline;
+}
+
+/* deixar o rótulo dele inline de novo */
+label[for="outro"] {
+    display: inline;
+}
+
+/* deixar só esse campo sem ocupar a tela toda */
+input[name="outro-assunto"] {
+    width: auto;
+}
+input:focus,
+textarea:focus {
+    background-color: #FFD;
+}
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
+button {
+    /* Precisamos tirar a borda que o navegador coloca por padrão */
+    border: 0;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: #3C1D3D;
+    color: white;
+    font-size: 1.2em;
+    /* Faz com que o botão apareça na direita */
+    margin-left: auto;
+    margin-top: 1em;
+}
+button:hover,
+button:focus {
+    background-color: #8C1D3D;
+}
+
+/* Esconde o input outro */
+input[value="Outro"] ~ input {
+    display: none;
+}
+input[value="Outro"]:checked ~ input {
+    display: inline;
 }

@@ -7,15 +7,16 @@
     box-sizing: border-box;
 }
 
-.petrobras {
+.citacao-bio:nth-of-type(even) {
     float: left;
     margin-left: 0;
 }
 
-blockquote:nth-of-type(odd) {
+.citacao-bio:nth-of-type(odd) {
     float: right;
     margin-right: 0;
 }
+
 .citacao-bio:hover,
 .citacao-bio:focus {
     box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
@@ -30,6 +31,7 @@ blockquote:nth-of-type(odd) {
 .citacao-bio:nth-of-type(even):focus {
     transform: scale(1.2) rotate(-5deg);
 }
+
 .container > p::first-letter {
     font-size: 200%;
     font-weight: bold;
@@ -43,37 +45,10 @@ blockquote:nth-of-type(odd) {
     content: '“';
     position: absolute;
     font-size: 10em;
+    line-height: .8;
     color: #bbb;
-    line-height: .8
 }
 
 .citacao-bio > p {
     position: relative;
-}
-
-.icones-redes-sociais a {
-    position: relative;
-}
-
-.icones-redes-sociais a:hover::after,
-.icones-redes-sociais a:focus::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: 100%;
-    right: 0;
-    text-indent: 0;
-    width: 300%;
-    background: black;
-    font-size: .75em;
-}
-.icones-redes-sociais a:hover::before,
-.icones-redes-sociais a:focus::before {
-    content: '';
-    width: 1em;
-    height: 1em;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(.5em) rotate(45deg);
 }
