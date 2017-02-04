@@ -98,3 +98,11 @@ A função calc() traz três grandes vantagens para nosso código.
   * A segunda é o poder: conseguimos criar layouts que não eram possíveis sem JavaScript antes, como elementos que ocupam um espaço que outros deixaram sobrando.
 
   * A terceira é a flexibilidade: como podemos misturar unidades nas contas, conseguimos deixar nosso layout ainda mais flexível, com um comportamento adequado em tamanhos de tela diferentes e com fontes diferentes.
+
+## Tabelas
+Segue:
+  * Tudo inicia com a tag `table`.
+  * Para indicar linhas usamos a tag `tr`.
+  * No cabeçalho usamos a tag `thead` -> as tabelas dentro do cabeçalho indicamos com a tag `th`.
+  * No corpo usamos a tag `tbody` -> e as tabelas usamos a tag `td`
+  * No footer também podemos usar a tag `tfooter`. "opcional"
