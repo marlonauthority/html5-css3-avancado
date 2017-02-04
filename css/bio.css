@@ -6,7 +6,6 @@
     width: 30ch;
     box-sizing: border-box;
     transition: box-shadow 1s, transform 1s;
-    /* vale quando o usuário parou de interagir */
     transition-delay: 1s, 0s;
 }
 
@@ -23,7 +22,6 @@
 .citacao-bio:hover,
 .citacao-bio:focus {
     box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
-    /* vale quando o usuário começou a interagir */
     transition-delay: 0s, 1s;
 }
 
@@ -58,32 +56,31 @@
     position: relative;
 }
 
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+}
 
 .habilidades th {
     font-weight: bold;
     background-color: #851944;
     color: white;
 }
-.habilidades thead th {
-  /* não precisamos colocar font-weight e color
-     pois já fizemos isso para todos os th */
-    background-color: #3C1D3D;
-}
+
 .habilidades td {
     background-color: #eee;
 }
+
 .habilidades th,
 .habilidades td {
     padding: 1em;
 }
 
-.habilidades {
-    border-collapse: separate;
-    border-spacing: .25em;
+.habilidades thead th {
+    background-color: #3C1D3D;
 }
-.habilidades {
-    margin: 1em 0;
-}
+
 .habilidades [colspan] {
     text-align: center;
     font-style: italic;
