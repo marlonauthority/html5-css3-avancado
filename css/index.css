@@ -26,6 +26,18 @@
     -webkit-transform: rotate(-5deg) skew(-10deg);
             transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    animation: flutua 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
+}
+@keyframes flutua {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
 }
 .botao-index {
     font-size: 1.25em;
@@ -37,6 +49,14 @@
     margin: 2em auto;
     display: block;
     text-align: center;
+    text-decoration: none;
+   transition: .5s;
+}
+.botao-index:focus,
+.botao-index:hover {
+    background-color: #C54974;
+    color: white;
+    box-shadow: 0 0 1em #FA9;
 }
 .secao-inicio {
     padding: 2em;
@@ -125,6 +145,21 @@ body {
     right: 0;
     top: 0;
     left: 0;
+    /* versão prefixada se quisermos dar suporte
+     a usuários Chrome, Safari e Opera */
+  -webkit-animation: aparece 2s;
+  animation: aparece 2s;
+}
+@keyframes aparece {
+    /* podemos usar a palavra-chave "from" também no lugar de 0% */
+    0% {
+        opacity: 0;
+        transform: scale(0.001);
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1.000);
+    }
 }
 .palavra-home {
     font-family: "Shadows Into Light", cursive;
@@ -225,7 +260,7 @@ body {
     /* altura = 3.5em */
     /* tx = .707 * h - .707 * w + w */
     /* ty = -.707 * h */
-    
+
     -webkit-transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
             transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
     -webkit-transform-origin: 0 0;
@@ -243,6 +278,9 @@ body {
 
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+    animation: aparece 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
 }
 .blog .inicio-post {
     position: absolute;

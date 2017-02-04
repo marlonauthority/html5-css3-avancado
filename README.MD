@@ -103,6 +103,45 @@ A função calc() traz três grandes vantagens para nosso código.
 Segue:
   * Tudo inicia com a tag `table`.
   * Para indicar linhas usamos a tag `tr`.
-  * No cabeçalho usamos a tag `thead` -> as tabelas dentro do cabeçalho indicamos com a tag `th`.
-  * No corpo usamos a tag `tbody` -> e as tabelas usamos a tag `td`
+  * No cabeçalho usamos a tag `thead` -> as colunas de dentro do cabeçalho indicamos com a tag `th`.
+  * No corpo usamos a tag `tbody` -> e as colunas usamos a tag `td`
   * No footer também podemos usar a tag `tfooter`. "opcional"
+
+
+## Transition
+CSS transitions permite que as mudanças nos valores das propriedades CSS ocorram suavemente sobre uma duração especificada.
+
+A propriedade transition possui quatro propriedades para você configurar:
+
+* transition-property ->Nome da propriedade CSS sobre a qual o efeito da transição vai ser aplicado. É obrigatória na declaração pois caso seja omitida, não existirá uma propriedade para se aplicar o efeito da transição.
+* transition-duration -> Duração do efeito em segundos (o padrão é 0)
+* transition-timing-function -> Forma como a transição progride no tempo (o padrão é ease).
+  - linear, ease, ease-in, ease-out e ease-in-out;
+* transition-delay -> Define a partir de quanto tempo (em segundos) o efeito da transição vai se iniciar (o padrão é 0).
+
+
+## Animation
+Com CSS3, conseguimos criar animações que podem substituir imagens animadas, animações em Flash e JavaScript em muitas páginas web
+Um keyframe descreve como o elemento que vai ser animado, deve ser renderizado em uma determinada fase, durante a sequência da animação.
+
+Ou seja, cada keyframe contém uma ou mais propriedades CSS que vão ser aplicadas no elemento que será ser animado e, a animação se encarrega de mudar de um keyframe para outro, aplicando a transição entre as mudanças de CSS.
+
+A sintaxe para a criação de keyframes é a seguinte:
+
+* ```@keyframes nomedaanimacao {
+      seletores-keyframe { estilo css para esse determinado keyframe; }
+      }```
+
+Com a animação criada nos keyframes, precisamos vinculá-la a algum seletor, caso contrário a animação não terá nenhum efeito. Para fazer isso, temos que declarar pelo menos duas propriedades que são obrigatórias:
+
+o nome da animação (igual ao especificado nos keyframes);
+a duração da animação (se não for declarada, a animação não se inicia pois o valor padrão é 0).
+
+* Propriedades
+  - animation-name: Nome da animação especificada nos @keyframes;
+  - animation-duration: Quanto tempo, em segundos ou milisegundos, durará um ciclo da animação (o padrão é 0).
+  - animation-timing-function: Forma como a animação progride no tempo (o padrão é ease). Do mesmo modo que a propriedade transition, pode ser usada de duas maneiras: uma é utilizando alguns valores já pré-definidos que são: `linear, ease, ease-in, ease-out e ease-in-out;`
+  - animation-delay: Define a partir de quanto tempo a animação vai se iniciar (o padrão é 0).
+  - animation-iteration-count: Determina o número de vezes que a animação vai se repetir (o padrão é 1). Podemos deixar a animação repetindo infinitamente, basta especificar o valor infinite.
+  - animation-direction: Especifica se ao final da animação, ela deve reiniciar seu fluxo normalmente (normal), que é o padrão, ou voltar no sentido inverso (reverse).
+  - animation-play-state: Define se a animação está rodando (running), que é o padrão, ou pausada (paused).
